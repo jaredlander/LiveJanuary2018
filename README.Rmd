@@ -1,0 +1,37 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# Live Training
+
+This is an empty repo for [Jared Lander's](https://www.jaredlander.com) [Live Training](https://www.safaribooksonline.com/live-training/courses/beginning-r-programming/0636920140665/).
+
+# Packages
+
+To get started run the following code to install the latest version of the necessary packages.
+
+```{r install.packages,eval=FALSE}
+packages <- c('coefplot', 'data.world', 'DBI', 'ggthemes', 'jsonlite', 
+              'rprojroot', 'RSQLite', 'tidyverse', 'UsingR')
+install.packages(packages)
+```
+
+# Data
+
+Data for the class is kept at [data.world](https://data.world/landeranalytics/training). Either download all the data files individually or source `prep/DownloadData.r`.
+
+```{r source-data-file,eval=FALSE}
+source('prep/DownloadData.r')
+```
