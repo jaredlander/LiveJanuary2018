@@ -13,3 +13,18 @@ excel_sheets('data/ExcelExample.xlsx')
 acsXL <- read_excel('data/ExcelExample.xlsx', sheet=3)
 acsXL
 
+library(RSQLite)
+
+drv <- dbDriver('SQLite')
+class(drv)
+
+con <- dbConnect(drv, 'data/diamonds.db')
+class(con)
+
+dbListTables(con)
+dbListFields(con, name='diamonds')
+
+diamondsTable <- dbGetQuery(con,
+                            'SELECT * FROM diamonds',
+                            stringsAsFactors=FALSE)
+head(diamondsTable)

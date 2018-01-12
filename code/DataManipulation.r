@@ -63,3 +63,14 @@ diamonds %>%
 diamonds %>% 
     group_by(cut, color) %>% 
     summarize(AvgPrice=mean(price), TotalCarat=sum(carat), Count=n())
+
+diamonds %>% 
+    filter(color == 'H') %>% 
+    summarize(AvgPrice=mean(price))
+
+library(readr)
+diamondColors <- read_csv('data/DiamondColors.csv')
+head(diamondColors)
+
+diamonJoin <- left_join(diamonds, diamondColors, by=c('color'='Color'))
+head(diamonJoin)
