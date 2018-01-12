@@ -33,3 +33,8 @@ download.file(
 download.file(
     'https://query.data.world/s/o_LrhM_oY5dexXVDbsMNxF2JyyIMrg',
     destfile=file.path(dataDir, 'TomatoFirst.csv'))
+
+# manhattan_Train.csv
+download.file(
+    'https://query.data.world/s/zGvNwNJbY2470sjsVxYFstm426SEf1',
+    destfile=file.path(dataDir, 'manhattan_Train.csv'))
